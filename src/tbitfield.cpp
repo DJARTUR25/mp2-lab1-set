@@ -100,11 +100,13 @@ int TBitField::operator==(const TBitField& bf) const // сравнение
 
 int TBitField::operator!=(const TBitField& bf) const // сравнение
 {
-	return 0;
+	if (*this == bf) return 0;
+	else return 1;
 }
 
 TBitField TBitField::operator|(const TBitField& bf) // операция "или"
 {
+	*this;
 	return*this;
 }
 
