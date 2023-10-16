@@ -242,11 +242,14 @@ TEST(TBitField, can_invert_large_bitfield)
   const int size = 38;
   TBitField bf(size), negBf(size), expNegBf(size);
   bf.SetBit(35);
+  cout << bf << endl;
+  cout << negBf << endl;
   negBf = ~bf;
-
+  cout << negBf << endl;
   for(int i = 0; i < size; i++)
     expNegBf.SetBit(i);
   expNegBf.ClrBit(35);
+  cout << expNegBf;
 
   EXPECT_EQ(expNegBf, negBf);
 }
